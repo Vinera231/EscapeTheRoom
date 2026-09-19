@@ -9,7 +9,4 @@ public class SafeOpen : MonoBehaviour
     {
         _animator.SetBool( s_animationSafeOpen,true);
     }
-
-    public void PlayIdleOpen() =>
-        _animator.SetBool(s_animationSafeOpen,false);
 }

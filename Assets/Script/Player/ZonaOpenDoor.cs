@@ -7,12 +7,6 @@ public class ZonaOpenDoor : MonoBehaviour
     [SerializeField] private AnimationDoor _door;
     [SerializeField] private InputReader _reader;
 
-    private void OnEnable() =>
-        _reader.Entered += OpenDoor;
-
-    private void OnDisable() =>
-        _reader.Entered -= OpenDoor;
-
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.TryGetComponent(out Player player))
@@ -31,18 +25,4 @@ public class ZonaOpenDoor : MonoBehaviour
         }
     }
 
-    private void OpenDoor()
-    {
-        if (_player == null)
-            return;
-
-        if (!_player.HasKey)
-            return;
-
-        if(_player.HasKey)
-        _door.PlayAnim();
-       
-        _player.UsedKey();
-        _textDoor.SetActive(false);
-    }
 }

@@ -20,7 +20,7 @@ public class Safe : MonoBehaviour
             return;
 
         _inputPassword += number.ToString();
-        _view.ShowPassword(_inputPassword);
+        _view.ShowPassword(_password);
     }
 
     public void RemoveNumber()
@@ -48,7 +48,6 @@ public class Safe : MonoBehaviour
         {
             _inputPassword = "";
             _view.Incorrect();
-            _safeOpen.PlayIdleOpen();
         }
     }
 }
