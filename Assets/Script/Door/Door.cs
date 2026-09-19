@@ -19,13 +19,13 @@ public class Door : MonoBehaviour, IInteractableObject
 
     public void Interact()
     {
-        if (_key.HasKey)
+       // if (_key.HasKey == false)
+           //return;
+
+        if (Input.GetKeyUp(KeyCode.T))
         {
-            if (Input.GetKeyUp(KeyCode.T))
-            {
-                _animationDoor.PlayAnim();
-                _key.gameObject.SetActive(true);
-            }
+            _animationDoor.PlayAnimation();
+            _key.gameObject.SetActive(true);
         }
     }
 

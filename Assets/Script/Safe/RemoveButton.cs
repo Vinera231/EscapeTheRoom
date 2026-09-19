@@ -17,10 +17,6 @@ public class RemoveButton : MonoBehaviour
     private void AnimationPress()
     {
         _animator.SetTrigger("Press");
-        if (_isRemove)
-        {
-            _safe.RemoveNumber();
-            return;
-        }
+        _safe.RemoveNumber();
     }
 }

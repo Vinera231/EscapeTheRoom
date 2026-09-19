@@ -23,8 +23,9 @@ public class SafeButton : MonoBehaviour
         _animator.SetTrigger("Press");
         if (_isEnter)
         {
-            _safe.AddNumber(_number);
+            _safe.PressEnter();
             return;
         }
+            _safe.AddNumber(_number);
     }
 }

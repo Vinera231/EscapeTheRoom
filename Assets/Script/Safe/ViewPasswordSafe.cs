@@ -14,13 +14,11 @@ public class ViewPasswordSafe : MonoBehaviour
     {
         _correct.SetActive(true);
         _error.SetActive(false);
-        _text.enabled = false;
     }
 
     public void Incorrect()
     {
         _correct.SetActive(false);
         _error.SetActive(true);
-        _text.enabled = false;
     }
 }

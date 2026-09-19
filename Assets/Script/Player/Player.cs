@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
     [SerializeField] private InputReader _reder;
 
     private float _moveX, _moveZ;
-    private bool _hasKey;
-
 
     private void OnEnable()
     {
