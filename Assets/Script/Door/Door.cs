@@ -5,7 +5,7 @@ public class Door : MonoBehaviour, IInteractableObject
 {
     [SerializeField] private TMP_Text _hint;
     [SerializeField] private AnimationDoor _animationDoor;
-    [SerializeField] private Key _key;
+    [SerializeField] private GameObject _key;
 
     private void Awake()
     {
@@ -19,13 +19,10 @@ public class Door : MonoBehaviour, IInteractableObject
 
     public void Interact()
     {
-       // if (_key.HasKey == false)
-           //return;
-
         if (Input.GetKeyUp(KeyCode.T))
         {
             _animationDoor.PlayAnimation();
-            _key.gameObject.SetActive(true);
+            _key.SetActive(false);
         }
     }
 

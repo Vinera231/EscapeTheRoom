@@ -11,6 +11,10 @@ public class Buttonmage : MonoBehaviour
     private void OnEnable() =>  
         _button.onClick.AddListener(onClick);   
 
-    private void onClick() =>
-      _image.SetActive(false); 
+    private void onClick()
+    {
+        _image.SetActive(false);
+        PauseSwitcher.Instance.PlayGame();
+        CursorShower.Instance.Hide();
+    }
 }

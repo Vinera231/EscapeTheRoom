@@ -11,6 +11,10 @@ public class Player : MonoBehaviour
 
     private float _moveX, _moveZ;
 
+
+    private void Start() =>
+     CursorShower.Instance.Hide();
+
     private void OnEnable()
     {
         _reder.Opened += TakeNote;
@@ -20,6 +24,7 @@ public class Player : MonoBehaviour
     {
         _reder.Opened -= TakeNote;
     }
+
 
     private void Update()
     {
@@ -32,6 +37,10 @@ public class Player : MonoBehaviour
         _controller.Move(_speed * Time.deltaTime * move);
     }
 
-    public void TakeNote() =>
+    public void TakeNote()
+    {
         _letter.SetActive(true);
+        CursorShower.Instance.Show();
+        PauseSwitcher.Instance.PauseGame();
+    }
 }
