@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Buttonmage : MonoBehaviour
+public class ButtonImage : MonoBehaviour
 {
     [SerializeField] private Button _button;
     [SerializeField] private GameObject _image;

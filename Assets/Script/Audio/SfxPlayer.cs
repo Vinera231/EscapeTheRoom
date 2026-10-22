@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class SfxPlayer: MonoBehaviour
 {
-    public static SfxPlayer Instance { get; private set; }
     [SerializeField] private AudioSource _sfx;
     [SerializeField] private AudioClip _screamSound;
+    [SerializeField] private AudioClip _stepSound;
+    public static SfxPlayer Instance { get; private set; }
 
     private void Awake()
     {
@@ -18,4 +19,13 @@ public class SfxPlayer: MonoBehaviour
 
     public void PlayScream( ) =>
         _sfx.PlayOneShot(_screamSound);
+   
+    public void PlayStep() =>
+        _sfx.PlayOneShot(_stepSound);
+    
+    public void PlayStop() =>
+        _sfx.Stop();
+
+    public void PlayOneShoot(AudioClip audioClip)=>
+        _sfx.PlayOneShot(audioClip);
 }
