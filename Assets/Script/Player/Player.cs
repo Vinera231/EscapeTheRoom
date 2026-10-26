@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     private float _moveX, _moveZ;
     private float _currentWalkTime;  
 
+    private bool _isWalking;
     private void Start() =>
      CursorShower.Instance.Hide();
 
@@ -41,21 +42,27 @@ public class Player : MonoBehaviour
         move.Normalize();
 
         _controller.Move(_speed * Time.deltaTime * move);
-        PlayWalkSound();
+        PlayWalkSound(move);
     }
 
-    private void PlayWalkSound()
-    {
-        if(_currentWalkTime <= 0)
+    private void PlayWalkSound(Vector3 move)
+    {     
+        if(move.sqrMagnitude < 0000.1f)
+        {
+            _currentWalkTime = 0f;
+            SfxPlayer.Instance.PlayStop();
+            return;
+        }
+
+
+        if(_currentWalkTime <= 0f)
         {
             if (_groundClips.Count > 0)
-                SfxPlayer.Instance.PlayOneShoot(_groundClips.Last());
-
-            _currentWalkTime = _delay;
-
-            if (_currentWalkTime == 0)
-                SfxPlayer.Instance.PlayStop();
+                SfxPlayer.Instance.PlayOneShoot(_groundClips.Last());                       
+            
+            _currentWalkTime = _delay;       
         }
+
         _currentWalkTime -= Time.deltaTime;
     }
 

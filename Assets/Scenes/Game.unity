@@ -25,10 +25,10 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.63
   m_AmbientMode: 1
-  m_SubtractiveShadowColor: {r: 0.35261658, g: 0.43774185, b: 0.6603774, a: 1}
+  m_SubtractiveShadowColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  m_HaloStrength: 0.5
-  m_FlareStrength: 1
+  m_HaloStrength: 0.362
+  m_FlareStrength: 0.454
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
@@ -684,6 +684,8 @@ MonoBehaviour:
   _controller: {fileID: 187213781}
   _letter: {fileID: 1178947279}
   _reder: {fileID: 998492794}
+  _groundClips:
+  - {fileID: 8300000, guid: d144e6417bfe1964daab5dd9c0eb1934, type: 3}
 --- !u!143 &187213781
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2806,7 +2808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6301887, g: 0.6266216, b: 0.6266216, a: 0.9372549}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2845,7 +2847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _time: {fileID: 343538043}
   _scrimer: {fileID: 1365104071}
-  _allTimes: 120
+  _allTimes: 60
   _loadTime: 5
 --- !u!1 &684064665
 GameObject:
@@ -3945,7 +3947,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfx: {fileID: 848116242}
   _screamSound: {fileID: 8300000, guid: e6a782df6b268d84386427d6b62ac753, type: 3}
-  _stepSound: {fileID: 8300000, guid: d144e6417bfe1964daab5dd9c0eb1934, type: 3}
 --- !u!82 &848116242
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4779,7 +4780,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.8704706, b: 0.47358483, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 0.02
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -6120,14 +6121,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292520718}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.0559487, y: -0.11224036, z: -0.043531783, w: 0.9911493}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 330585546}
   m_Father: {fileID: 187213776}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -6.931, y: -12.664, z: -4.26}
 --- !u!114 &1292520720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9377,7 +9378,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0f75292f7b650474090325d7958a4a58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f3d92eea11d2dc42825678a314b2bf9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
