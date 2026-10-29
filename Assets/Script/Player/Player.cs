@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     private float _moveX, _moveZ;
     private float _currentWalkTime;  
 
-    private bool _isWalking;
     private void Start() =>
      CursorShower.Instance.Hide();
 

@@ -19,12 +19,17 @@ public class Door : MonoBehaviour, IInteractableObject
 
     public void Interact()
     {
-        if (Input.GetKeyUp(KeyCode.T))
+            SfxPlayer.Instance.PlayDoor();
+        if (Input.GetKeyUp(KeyCode.E))
         {
             _animationDoor.PlayAnimation();
+            PlaySound();
             _key.SetActive(false);
         }
     }
+
+    private void PlaySound() =>
+        SfxPlayer.Instance.PlayDoor();
 
     public void ShowHint()
     {

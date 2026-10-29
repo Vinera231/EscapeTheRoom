@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Key : MonoBehaviour, IInteractableObject
@@ -13,9 +14,16 @@ public class Key : MonoBehaviour, IInteractableObject
 
     public void Interact()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
-        _keyPrefab.SetActive(true);
+       
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            _keyPrefab.SetActive(true);
+            PlaySound();
+        }
     }
+
+    private void PlaySound() =>
+         SfxPlayer.Instance.PlayKey();
 
     public void ShowHint()
     {

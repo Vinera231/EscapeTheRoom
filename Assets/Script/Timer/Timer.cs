@@ -43,5 +43,6 @@ public class Timer : MonoBehaviour
     {
         yield return new WaitForSeconds(_loadTime);
         SceneManager.LoadScene(0);
+        CursorShower.Instance.Show();
     }
 }
